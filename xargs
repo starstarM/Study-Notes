@@ -1,0 +1,51 @@
+xargs
+xargs命令是给其他命令传递参数的一个过滤器，也可以组合多个命令的一个工具 。xargs的默认命令是echo，默认定界符是空格。这意味着通过管道或者stdin传递给xargs的输入将会包含换行和空白，通过xargs的处理，换行和空白符被空格取代。
+
+实例：
+cat test.txt
+
+a b c d e f g
+h i j k l m n
+o p q
+r s t
+u v w x y z
+
+cat test.txt | xargs 
+
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+
+-n 选项控制输出列数：
+cat test.txt | xargs - n 3
+
+a b c
+d e f
+g h i
+j k l
+m n o
+p q r
+s t u
+v w x
+y z
+
+
+-d选项可以自定义定界符：
+
+echo "nameXnameXnameXnameX" | xargs -dX
+
+name name name name
+
+
+利用xargs删除海量文件：
+ls | xargs -n 10 rm -rf 
+
+find . -type f -name "*" | xargs rm -rf 
+
+
+
+
+
+
+
+
+
+
