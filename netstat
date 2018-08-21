@@ -71,24 +71,3 @@ netstat命令用来打印Linux中网络系统的状态信息，了解整个Linux
 	显示网络接口列表
 	netstat -i
 	显示详情信息，使用netstat -ie
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -39,13 +39,3 @@ name name name name
 ls | xargs -n 10 rm -rf 
 
 find . -type f -name "*" | xargs rm -rf 
-
-
-
-
-
-
-
-
-
-
